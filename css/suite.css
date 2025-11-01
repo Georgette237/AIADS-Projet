@@ -1,0 +1,30 @@
+/* Why section */
+.why {
+  padding: 4rem 10%;
+}
+
+.why h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.feature span {
+  font-size: 1.5rem;
+  color: #2e8b57;
+}
