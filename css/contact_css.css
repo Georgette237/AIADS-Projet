@@ -23,7 +23,7 @@
 html,body{
     height:100%;
     margin:0; 
-    font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+    font-family:'Georgia', 'Merriweather', times, serif;
     color:#172512; 
     background: #eef4ea;
     color:#222;
@@ -403,4 +403,5 @@ p{
   .hero{height:420px}
   .hero-left h1{font-size:34px}
 }
+
 
