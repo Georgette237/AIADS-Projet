@@ -22,7 +22,7 @@
 html,body{
     height:100%;
     margin:0; 
-    font-family:'Roboto', 'open sans', 'Lato', Arial, sans-seril;  
+    font-family:'Georgia', 'Merriweather', times, serif;
     color:#172512; 
     -webkit-font-smoothing:antialiased;
     }
@@ -479,4 +479,5 @@ img{
   .hero{height:420px}
   .hero-left h1{font-size:34px}
 }
+
 
