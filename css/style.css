@@ -316,6 +316,10 @@ img{
     grid-template-columns:repeat(5,1fr); 
     gap:12px
 }
+.domain-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
 
 .domain-card{
     background:var(--olive); 
@@ -489,6 +493,7 @@ img{
   .hero{height:420px}
   .hero-left h1{font-size:34px}
 }
+
 
 
 
