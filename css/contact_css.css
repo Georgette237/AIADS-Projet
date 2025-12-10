@@ -347,7 +347,7 @@ p{
     color: #d9e4d9;
 }
 .footer p {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     color: white;
 }
 
@@ -425,6 +425,7 @@ p{
   .hero{height:420px}
   .hero-left h1{font-size:34px}
 }
+
 
 
 
