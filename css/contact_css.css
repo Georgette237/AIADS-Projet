@@ -346,6 +346,10 @@ p{
     margin-bottom: 15px;
     color: #d9e4d9;
 }
+.footer p {
+    margin-bottom: 10px;
+    color: white;
+}
 
 /* ABOUT */
 .footer-about {
@@ -421,6 +425,7 @@ p{
   .hero{height:420px}
   .hero-left h1{font-size:34px}
 }
+
 
 
 
