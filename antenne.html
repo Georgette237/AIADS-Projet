@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antennes & Partenariats</title>
+
+    <!-- CSS général -->
+    <link rel="stylesheet" href="antenne_partenariat.css">
+
+    <!-- Icônes FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Animations AOS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <!-- Leaflet (CARTE MONDIALE) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<style>
+
+
+    body {
+    font-family:'Times New Roman', Times, serif
+    margin: 0;
+    background: #f5f5f5;
+}
+/* Header */
+
+.header2 {
+    background: #2c7a34;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+    color: #2c7a34;
+    font-weight: bold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 45px;
+    color: #2c7a34;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+#worldMap {
+    margin: 20px auto;
+    width: 90%;
+    height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+
+<body>    
+<header class="header2" data-aos="zoom-in">
+    <h1>🌍 Antennes & Partenariats</h1>
+    <p>Découvrez la présence internationale de l’AIADS et ses partenaires.</p>
+</header>
+
+<!-- 🌍 SECTION CARTE MONDIALE -->
+<section>
+    <h2 class="section-title">Carte de Reférence </h2>
+    <div id="worldMap"></div>
+</section>
+
+<!-- 🌎 SECTION ANTENNES -->
+<section>
+    <h2 class="section-title">Nos Antennes</h2>
+    <div class="grid" id="antenneList"></div>
+</section>
+
+<!-- 🤝 SECTION PARTENAIRES -->
+<section>
+    <h2 class="section-title">Nos Partenaires</h2>
+    <div class="grid" id="partnersList"></div>
+</section>
+
+<!-- JS : Animation AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<!-- JS : Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script >
+    
+// -----------------------------
+// ANTENNES
+// -----------------------------
+const antennes = [
+    {
+        country: "USA",
+        city: "Washington",
+        lat: 38.9072,
+        lon: -77.0369,
+        name: "KENZO Eric",
+        role: "Président AIADS USA",
+        phone: "+1 (225) 362-2919"
+    },
+    {
+        country: "France",
+        city: "Paris",
+        lat: 48.8566,
+        lon: 2.3522,
+        name: "NGOA Appolinaire",
+        role: "Président AIADS France",
+        phone: "+33 7 66 96 68 24"
+    }
+];
+
+// -----------------------------
+// PARTENAIRES
+// -----------------------------
+const partners = [
+    {
+        name: "LéCare Agriculture",
+        logo: "images/logo.png",
+        country: "Cameroun",
+        city: "Yaoundé",
+        lat: 3.866667,
+        lon: 11.516667,
+        description: "Entreprise spécialisée dans l'Agrp-pédologue, Phytopharmacien, Nutitionniste Animale, Agriculteur/Agronome .",
+        url: "https://lecare-agriculture.vercel.app"
+    }
+];
+
+// -----------------------------
+// AFFICHAGE CARTES
+// -----------------------------
+const map = L.map('worldMap').setView([20, 0], 2);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18
+}).addTo(map);
+
+// Marqueurs Antennes
+antennes.forEach(a => {
+    L.marker([a.lat, a.lon]).addTo(map)
+        .bindPopup(`<b>${a.country} - ${a.city}</b><br>${a.name}<br>${a.role}`);
+});
+
+// Marqueurs Partenaires
+partners.forEach(p => {
+    L.marker([p.lat, p.lon], {icon: L.icon({
+        iconUrl: 'images/logo.png', 
+        iconSize:[40, 40], // taille du logo (largeur, longueur)
+        iconAnchor:[20, 20], //Point d'ancrage
+         })})
+        .addTo(map)
+        .bindPopup(`<b>${p.name}</b><br>${p.city}, ${p.country}`);
+});
+
+// -----------------------------
+// AFFICHAGE ANTENNES
+// -----------------------------
+function displayAntennes() {
+    const container = document.getElementById("antenneList");
+
+    antennes.forEach(a => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.setAttribute("data-aos", "fade-up");
+
+        card.innerHTML = `
+            <i class="fas fa-building icon"></i>
+            <h3>${a.country} - ${a.city}</h3>
+            <p><strong>${a.name}</strong></p>
+            <p>${a.role}</p>
+            <p>📞 ${a.phone}</p>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+// -----------------------------
+// AFFICHAGE PARTENAIRES
+// -----------------------------
+function displayPartners() {
+    const container = document.getElementById("partnersList");
+
+    partners.forEach(p => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.setAttribute("data-aos", "zoom-in");
+
+        card.innerHTML = `
+            <img src="${p.logo}" class="logo">
+            <h3>${p.name}</h3>
+            <p>${p.city}, ${p.country}</p>
+            <p>${p.description}</p>
+            <a href="${p.url}" target="_blank" class="btn">Voir le site</a>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+displayAntennes();
+displayPartners();
+
+</script>
+
+<script>
+AOS.init(); 
+</script>
+
+</body>
+</html
+
+
+
+
