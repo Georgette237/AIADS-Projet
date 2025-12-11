@@ -22,12 +22,17 @@
   }
 *{box-sizing:border-box}
 html,body{
-    height:100%;
-    margin:0; 
-    font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
-    color:#172512; 
-    -webkit-font-smoothing:antialiased;
-    }
+   margin:0;
+  background:linear-gradient(180deg,var(--bg),#eef4ea 60%);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  height: 100%;  
+  font-family:'Georgia', 'Merriweather', times, serif;
+  color:#172512; 
+  -webkit-font-smoothing:antialiased;
+}
 
 
 .topbar {
@@ -190,4 +195,5 @@ html,body{
   .gallery{grid-template-columns:1fr}
   .hero{height:420px}
   .hero-left h1{font-size:34px}
+
 }
