@@ -27,18 +27,68 @@
   </header>
    <main class="container">
     <!-- Intro / Hero -->
-    <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <h1>Nos champs d'action</h1>
-          <p>Nous intervenons sur toute la chaîne : production primaire (agriculture, élevage, pisciculture), transformation, conservation, packaging et commercialisation. Chaque domaine est expliqué en détail ci-dessous avec images et vidéos.</p>
+   <section class="hero">
+  <h1 class="carousel-title">La production immobilière</h1>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <!-- SLIDE 1 -->
+      <div class="carousel-slide">
+        <img src="images/immo1.jpg" alt="Appui administratif et juridique">
+        <div class="slide-text">
+          <h2>1. Appui administratif et juridique</h2>
+          <ul>
+            <li>Montage de dossiers de régularisation foncière</li>
+            <li>Assistance pour immatriculation / mutation</li>
+            <li>Conseils juridiques pour achat, vente, location</li>
+          </ul>
         </div>
-        <figure class="hero-image">
-          <img src="images/img2.png" alt="Illustration agriculture">
-          <figcaption>Intervention terrain et accompagnement technique</figcaption>
-        </figure>
       </div>
-    </section>
+      <!-- SLIDE 2 -->
+      <div class="carousel-slide">
+        <img src="images/immo4.jpg" alt="Facilitation institutionnelle">
+        <div class="slide-text">
+          <h2>2. Facilitation institutionnelle</h2>
+          <ul>
+            <li>Mise en relation avec cadastre, notariat, communes…</li>
+            <li>Suivi des procédures administratives</li>
+            <li>Médiation entre porteurs de projets et autorités</li>
+          </ul>
+        </div>
+      </div>
+      <!-- SLIDE 3 -->
+      <div class="carousel-slide">
+        <img src="images/immo6.jpg" alt="Services commerciaux">
+        <div class="slide-text">
+          <h2>3. Services commerciaux</h2>
+          <ul>
+            <li>Vente de terrains titrés ou en régularisation</li>
+            <li>Vente de maisons finies ou en chantier</li>
+            <li>Accompagnement pour achat et sécurisation des transactions</li>
+          </ul>
+        </div>
+      </div>
+      <!-- SLIDE 4 -->
+      <div class="carousel-slide">
+        <img src="images/img14.jpg" alt="Assistance à l’immatriculation">
+        <div class="slide-text">
+          <h2>4. Assistance à l’immatriculation</h2>
+          <ul>
+            <li>Suivi technique pour obtention du titre foncier</li>
+            <li>Plans de bornage et levés topographiques</li>
+            <li>Démarches cadastrales complètes</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <button class="carousel-btn prev">❮</button>
+    <button class="carousel-btn next">❯</button>
+
+  </div>
+</section>
+
     <!-- Card for each domain -->
     <section id="domains" class="domains">
       <!-- Agriculture -->
@@ -226,6 +276,29 @@
     </div>
 </footer>
   <script lang="Javascript">
+
+// Carousel Immobilier
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+const nextBtn = document.querySelector('.carousel-btn.next');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+
+let index = 0;
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  index = (index + 1) % slides.length;
+  updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+  index = (index - 1 + slides.length) % slides.length;
+  updateCarousel();
+});
+
     // scripts.js
 document.addEventListener('DOMContentLoaded', function () {
   // Insert current year
@@ -252,6 +325,7 @@ document.addEventListener('DOMContentLoaded', function () {
   </script>
 </body>
 </html>
+
 
 
 
