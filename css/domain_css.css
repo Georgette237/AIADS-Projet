@@ -117,6 +117,9 @@ img{
 .carousel-container {
   position: relative;
   width: 100%;
+  max-width: 1200px;      /* élargit le carousel */
+  margin: 0 auto;         /* centre */
+  height: 420px;
   overflow: hidden;
   border-radius: 14px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.2);
@@ -129,6 +132,7 @@ img{
 
 .carousel-slide {
   min-width: 100%;
+  heidth: 100%
   display: flex;
   gap: 20px;
   padding: 25px;
@@ -137,6 +141,9 @@ img{
 }
 
 .carousel-slide img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px
   width: 45%;
   border-radius: 10px;
   object-fit: cover;
@@ -339,5 +346,6 @@ img{
   .hero-left h1{font-size:34px}
 
 }
+
 
 
