@@ -189,7 +189,7 @@ html,body{
   .gallery{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:700px){
-  .mainnav{display:none}
+  /*.mainnav{display:none}*/
   .mobile-menu-btn{display:inline-block}
   .domains-grid{grid-template-columns:repeat(2,1fr)}
   .gallery{grid-template-columns:1fr}
@@ -197,3 +197,4 @@ html,body{
   .hero-left h1{font-size:34px}
 
 }
+
