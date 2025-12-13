@@ -62,15 +62,14 @@ html,body{
     padding: 10px 20px;
     flex-wrap: wrap;
 }
-
-.brand{
+/*.brand{
   display:flex;
   align-items:center;
   gap:12px;
   text-decoration:none;
-}
+}*/
 /* Logo */
- .brand img {
+ /*.brand img {
     width:56px;
     height:56px;
     border-radius:50%;
@@ -82,13 +81,6 @@ html,body{
     font-size:18px
 }
 
-/*.brand-logo {
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  object-fit:cover;
-}*/
-
 .brand-title {
     font-size: 20px;
     font-weight: bold;
@@ -98,7 +90,44 @@ html,body{
     font-size: 12px;
     font-style: italic;
     color:var(--muted)
+}*/
 
+/* Conteneur logo + texte */
+.brand{
+  display:flex;
+  align-items:center;   /* aligne verticalement logo et texte */
+  gap:10px;             /* espace entre logo et texte */
+  text-decoration:none;
+}
+
+/* Logo */
+.logo img{
+  width:55px;
+  height:55px;
+  border-radius:50%;    /* logo rond */
+  object-fit:cover;
+  display:block;
+}
+
+/* Bloc texte */
+.brand-text{
+  display:flex;
+  flex-direction:column; /* AIADS au-dessus, slogan en dessous */
+  line-height:1.2;
+}
+
+/* Titre */
+.brand-title{
+  font-size:22px;
+  font-weight:700;
+  color:#1e3a28;
+}
+
+/* Slogan */
+.brand-sub{
+  font-size:12px;
+  font-style:italic;
+  color:#6b6b6b;
 }
 
 /* Navigation */
@@ -199,6 +228,17 @@ html,body{
   .hero-left h1{font-size:34px}
 
 }
+@media (max-width:700px){
+  .brand-title{
+    font-size:18px;
+  }
+
+  .brand-sub{
+    font-size:11px;
+    max-width:220px;
+  }
+}
+
 
 
 
