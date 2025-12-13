@@ -25,17 +25,25 @@
 </style>
 </head>
 <body>
+  <!-- Language Switcher -->
+<div class="lang-switcher">
+  <button class="lang-btn" onclick="toggleLangMenu()">🌐 Langue</button>
+  <div class="lang-menu" id="langMenu">
+    <button onclick="changeLang('fr')">🇫🇷 Français</button>
+    <button onclick="changeLang('en')">🇬🇧 English</button>
+  </div>
+</div>
+  
   <!-- Header (commun) -->
   <header class="topbar">
     <div class="wrap header-inner">
       <a class="brand" >
         <div class="logo"><img src="images/img1.jpg" alt="logo "></div>
         <div class="brand-text">
-          <div class="brand-title">AIADS</div>
-          <div class="brand-sub">Agence Internationale d'Appui au Développement Solidaire</div>
+          <div class="brand-title" data-i18n="hero.title">AIADS</div>
+          <div class="brand-sub" data-i18n="hero.text">Agence Internationale d'Appui au Développement Solidaire</div>
         </div>
       </a>
-
       <nav class="mainnav" role="navigation">
         <a href="index.html" class="nav-link active">Accueil</a>
         <a href="service.html" class="nav-link">Services</a>
@@ -260,10 +268,22 @@ Notre équipe d'experts travaille en étroite collaboration avec nos clients pou
          &copy; <span id="year"></span> AIADS. Tous droits réservés.
     </div>
 </footer>
-
   <script src="js/javascript.js"></script>
+  <script>
+function toggleLangMenu(){
+  document.getElementById("langMenu").classList.toggle("open");
+}
+
+function changeLang(lang){
+  i18next.changeLanguage(lang, () => {
+    updateContent();
+    document.getElementById("langMenu").classList.remove("open");
+  });
+}
+</script>
 </body>
 </html>
+
 
 
 
