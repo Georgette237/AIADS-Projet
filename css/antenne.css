@@ -70,7 +70,7 @@ html,body{
   text-decoration:none;
 }
 /* Logo */
- .logo {
+ .brand img {
     width:56px;
     height:56px;
     border-radius:50%;
@@ -199,6 +199,7 @@ html,body{
   .hero-left h1{font-size:34px}
 
 }
+
 
 
 
