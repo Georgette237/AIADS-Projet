@@ -113,12 +113,7 @@ html,body{
     color:var(--green-900)
 }
 
-.mobile-menu-btn{
-    display:none; 
-    border:none; 
-    background:transparent; 
-    font-size:18px
-}
+/*.mobile-menu-btn{display:none;border:none;background:transparent;font-size:18px}
 
 /* Header */
 
@@ -197,4 +192,5 @@ html,body{
   .hero-left h1{font-size:34px}
 
 }
+
 
