@@ -33,7 +33,11 @@ html,body{
   color:#172512; 
   -webkit-font-smoothing:antialiased;
 }
-
+.wrap{
+    max-width:var(--maxw); 
+    margin:0 auto; 
+    padding:0 18px
+}
 
 .topbar {
     position: sticky;
@@ -234,6 +238,7 @@ html,body{
     max-width:220px;
   }
 }
+
 
 
 
