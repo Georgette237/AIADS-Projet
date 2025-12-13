@@ -61,7 +61,7 @@ html,body{
 .brand{
   display:flex;
   align-items:center;   /* aligne verticalement logo et texte */
-  gap:4;             /* espace entre logo et texte */
+  gap:0;             /* espace entre logo et texte */
   text-decoration:none;
 }
 
@@ -95,12 +95,6 @@ html,body{
   font-style:italic;
   color:#6b6b6b;
 }
-.brand-title,
-.brand-sub{
-  margin:0;
-  padding:0;
-}
-
 
 /* Navigation */
 .mainnav {
@@ -210,6 +204,7 @@ html,body{
     max-width:220px;
   }
 }
+
 
 
 
