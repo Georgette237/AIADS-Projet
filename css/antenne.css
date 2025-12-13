@@ -185,13 +185,14 @@ html,body{
 }
 @media (max-width:700px){
   .mainnav{display:none}
-  /*.mobile-menu-btn{display:inline-block}*/
+  .mobile-menu-btn{display:inline-block}
   .domains-grid{grid-template-columns:repeat(2,1fr)}
   .gallery{grid-template-columns:1fr}
   .hero{height:420px}
   .hero-left h1{font-size:34px}
 
 }
+
 
 
 
