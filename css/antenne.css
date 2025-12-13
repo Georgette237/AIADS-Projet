@@ -52,16 +52,6 @@ html,body{
     justify-content:space-between;
     padding:14px 0
 }
-
-.wrap.header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    flex-wrap: wrap;
-}
 /*.brand{
   display:flex;
   align-items:center;
@@ -238,6 +228,7 @@ html,body{
     max-width:220px;
   }
 }
+
 
 
 
