@@ -97,7 +97,7 @@ html,body{
 /* Navigation */
 .mainnav {
     display: flex;
-    gap: 18px;
+    gap: 20px;
     align-items:center
 }
 
@@ -192,6 +192,7 @@ html,body{
   .hero-left h1{font-size:34px}
 
 }
+
 
 
 
