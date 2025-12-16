@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIADS - Domaines d'Intervention</title>
     <link rel="stylesheet" href="css/domain_css.css">
+    <link rel="stylesheet" href="css/download.css">
 </head>
 <body>
     <header class="topbar">
@@ -251,6 +252,34 @@
       <p>Besoin d'une intervention sur mesure ? Envoyez-nous les détails de votre projet.</p>
       <a class="btn" href="contact.html">Envoyer un email</a>
     </section>
+    <p class="download-description">
+  Veuillez consulter le communiqué officiel ci-dessous.
+  Ce document est disponible au format PDF.
+</p>
+
+<div class="download-box" id="downloadBox">
+  <div class="icon-wrapper">
+    <!-- ICÔNE SVG PDF -->
+    <svg viewBox="0 0 24 24" class="pdf-icon" aria-hidden="true">
+      <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+      <path d="M14 2v6h6"/>
+      <text x="6.5" y="18" font-size="7" font-weight="700">PDF</text>
+    </svg>
+  </div>
+
+  <div class="download-text">
+    <strong>Télécharger le communiqué</strong>
+    <span>au format PDF</span>
+  </div>
+
+  <!-- Effet ripple -->
+  <span class="ripple"></span>
+</div>
+
+<p id="download-message" class="hidden">
+  ✅ Le téléchargement du fichier PDF a commencé.
+</p>
+    
   </main>
   <!-- Footer (commun) -->
   <footer class="footer">
@@ -329,8 +358,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
   </script>
+ <script  src="js/script.js"></script>
+ 
 </body>
 </html>
+
 
 
 
