@@ -181,54 +181,10 @@ ${message}
          &copy; <span id="year"></span> AIADS. Tous droits réservés.
     </div>
 </footer>
-    
-  
-  
-       <script lang="javascript">
-  
-      // Apparition au défilement
-const fadeEls = document.querySelectorAll('.fade-in');
-
-window.addEventListener('scroll', () => {
-  fadeEls.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      el.classList.add('visible');
-    }
-  });
-});
-
-//-------Formulaire de contact------//
-document.getElementById('contact-form').addEventListener('submit', (e) => {e.preventDefault();
-    const name=document.getElementById('name').value;
-    const email=document.getElementById('email').value;
-    const message= document.getElementById('message').value;
-//----choisir ici ton mode de contact---//
-
-    const whatsappNumber = 237673255069; //ton numero whatsapp sans le +
-    const messageText= 'Bonjour, je suis $ {name}. Mon email ${email}. Message:${message} ';
-    const whatsappUrl='htpps://wa.me/${whatsappNumero}?text=${encodeURIComponent(messageText)}';
-
-    //redicteur vers whatsapp//
-  window.open(whatsappUrl, '_blank');
-});
-
-//-----boutons d'adhesion----//
-
-const adhesionBtns=document.querySelectorAll('.adhesion-btn');
-adhesionBtns.forEach(btn => { 
-btn.addEventListener('click', () =>{
-    const type= btn.dataset.type;
-    const whatsappNumber= "237672255069"; //ton numero whatsapp
-    const text= 'Bonjour je souhaite adherer a la formule ${type.toUpperCase()} a la formation'
-    const whatsappUrl='htpps://wa.me/${whatsappNumero}?text=${encodeURIComponent(text)}';
-        window.open(whatsappUrl, '_blank');
-});
-});
-  </script>
   <script src="js/javascript.js"></script>
 </body>
 </html>
+
 
 
 
