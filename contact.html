@@ -6,6 +6,60 @@
     <title>AIADS - Contact</title>
     <link rel="stylesheet" href="css/contact_css.css">
 </head>
+    <script>
+/* --- Envoi via WhatsApp --- */
+document.getElementById("whatsappSend").addEventListener("click", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const objet = document.getElementById("objet").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappNumber = "237673255069"; 
+
+    const text = `Bonjour, je suis ${name}.
+Téléphone : ${phone}
+Email : ${email}
+Objet : ${objet}
+
+Message :
+${message}`;
+
+    const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+
+    window.open(url, "_blank");
+});
+
+
+/* --- Envoi via Email --- */
+document.getElementById("emailSend").addEventListener("click", function(e){
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const objet = document.getElementById("objet").value;
+    const message = document.getElementById("message").value;
+
+    const subject = "Contact via site AIADS : " + objet;
+
+    const body = `
+Nom : ${name}
+Téléphone : ${phone}
+Email : ${email}
+
+${message}
+    `;
+
+    const mailtoURL = "mailto:aiadsfrance@gmail.com?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+
+    window.location.href = mailtoURL;
+});
+</script>
+
 <body>
     <header class="topbar">
     <div class="wrap header-inner">
@@ -174,6 +228,7 @@ btn.addEventListener('click', () =>{
   <script src="js/javascript.js"></script>
 </body>
 </html>
+
 
 
 
