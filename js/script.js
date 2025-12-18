@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500);
 
     // Téléchargement du fichier
-    const fileUrl = "communique.pdf"; // chemin du PDF
+    const fileUrl = "fichier/fiche-vierge.pdf"; // chemin du PDF
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.download = "communique.pdf";
+    link.download = "fiche-vierge.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
