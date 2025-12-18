@@ -27,38 +27,39 @@
   </header>
 
   <main>
- <!-- Formulaire -->
-<form id="contactFormMain" class="contact-form">
-    <div class="form-row">
-        <input id="name" name="name" required placeholder="Nom complet" />
-        <input id="phone" name="phone" required placeholder="Téléphone" />
-    </div>
 
-    <input id="email" name="email" type="email" required placeholder="Email" />
+    <section class="section">
+      <div class="wrap"> 
+         <h2 class="section-title">Contact </h2> 
+         <p class="lead centered">Remplissez le formulaire ci-dessous ou contactez-nous directement par téléphone ou email.</p>
+        <!-- Formulaire -->
+       <form id="contactFormMain" class="contact-form">
+        <div class="form-row">
+          <input id="name" name="name" required placeholder="Nom complet" />
+          <input id="phone" name="phone" required placeholder="Téléphone" />
+        </div>
+           <input id="email" name="email" type="email" required placeholder="Email" />
 
-    <select id="objet" name="objet" required>
-        <option value="">Objet de la demande</option>
-        <option>Étude de faisabilité</option>
-        <option>Formation</option>
-        <option>Montage de projet</option>
-        <option>Immobilier</option>
-        <option>Autre</option>
-    </select>
+        <select id="objet" name="objet" required>
+         <option value="">Objet de la demande</option>
+         <option>Étude de faisabilité</option>
+         <option>Formation</option>
+         <option>Montage de projet</option>
+         <option>Immobilier</option>
+         <option>Autre</option>
+        </select>
+        <textarea id="message" name="message" rows="6" placeholder="Résumé du projet / message" required></textarea>
 
-    <textarea id="message" name="message" rows="6" placeholder="Résumé du projet / message" required></textarea>
-
-    <div style="display:flex;gap:12px;align-items:center">
-    <button type="button" id="whatsappSend">Envoyer via WhatsApp</button>
-    <button type="button" id="emailSend" class="btn-contact">Contacter par email</button>
-</div>
-
-</form>
-            
-          <aside class="contact-aside">
-            <h3><center>Coordonnées :</center></h3>
-            <p><strong>Contactez-nous:</strong> +237 6 97 87 76 53/ 673 25 50 69</p>
-            <p><strong>Email:</strong> aiadsfrance@gmail.com</p>
-            <p><strong>Adresse :</strong> Avenue de la Coopération, Yaoundé, Cameroun</p>
+        <div style="display:flex;gap:12px;align-items:center">
+         <button type="button" id="whatsappSend">Envoyer via WhatsApp</button>
+         <button type="button" id="emailSend" class="btn-contact">Contacter par email</button>
+        </div>
+    </form>        
+        <aside class="contact-aside">
+         <h3><center>Coordonnées :</center></h3>
+          <p><strong>Contactez-nous:</strong> +237 6 97 87 76 53/ 673 25 50 69</p>
+          <p><strong>Email:</strong> aiadsfrance@gmail.com</p>
+          <p><strong>Adresse :</strong> Avenue de la Coopération, Yaoundé, Cameroun</p>
           </aside>
         </div>
       </div>
@@ -177,6 +178,7 @@ ${message}
 </script>
 </body>
 </html>
+
 
 
 
