@@ -81,19 +81,11 @@ ${message}
   </header>
 
   <main>
-  <!--contact-->
-    <section class="section">
-      <div class="wrap">
-        <h2 class="section-title">Contact </h2>
-        <p class="lead centered">Remplissez le formulaire ci-dessous ou contactez-nous directement par téléphone ou email.</p>
-
-        <div class="two-col">
-         <!-- Formulaire -->
+ <!-- Formulaire -->
 <form id="contactFormMain" class="contact-form">
-    <div class="form-row"><div style="display:flex;gap:12px;align-items:center">
-    <button type="button" id="whatsappSend">Envoyer via WhatsApp</button>
-    <button type="button" id="emailSend" class="btn-contact">Contacter par email</button>
-</div>
+    <div class="form-row">
+        <input id="name" name="name" required placeholder="Nom complet" />
+        <input id="phone" name="phone" required placeholder="Téléphone" />
     </div>
 
     <input id="email" name="email" type="email" required placeholder="Email" />
@@ -184,6 +176,7 @@ ${message}
   <script src="js/javascript.js"></script>
 </body>
 </html>
+
 
 
 
