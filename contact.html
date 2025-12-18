@@ -90,9 +90,10 @@ ${message}
         <div class="two-col">
          <!-- Formulaire -->
 <form id="contactFormMain" class="contact-form">
-    <div class="form-row">
-        <input id="name" name="name" required placeholder="Nom complet" />
-        <input id="phone" name="phone" required placeholder="Téléphone" />
+    <div class="form-row"><div style="display:flex;gap:12px;align-items:center">
+    <button type="button" id="whatsappSend">Envoyer via WhatsApp</button>
+    <button type="button" id="emailSend" class="btn-contact">Contacter par email</button>
+</div>
     </div>
 
     <input id="email" name="email" type="email" required placeholder="Email" />
@@ -228,6 +229,7 @@ btn.addEventListener('click', () =>{
   <script src="js/javascript.js"></script>
 </body>
 </html>
+
 
 
 
