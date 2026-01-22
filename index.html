@@ -23,52 +23,81 @@
       color: white;
       text-align: center;
     }
-  
-  /* Fond sombre */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  /* =========================
+   POPUP / MODALE CSS
+========================= */
+
+/* Lien sur toute la carte */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
-/* Fenêtre */
-.modal-content {
-  background: white;
-  padding: 20px;
+/* Fond de la popup */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: var(--card);
   width: 90%;
-  max-width: 400px;
-  border-radius: 10px;
-  position: relative;
-  animation: fadeIn 0.3s ease;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* Affichage au clic */
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /* Bouton fermer */
-.close {
+.popup .close {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 15px;
-  font-size: 24px;
-  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: bold;
+  transition: color 0.2s ease;
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}  
+.popup .close:hover {
+  color: var(--accent);
+}
+
+/* Texte */
+.popup h3 {
+  margin-top: 0;
+  color: var(--green-900);
+}
+
+.popup p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Effet hover sur la carte */
+.domain-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.domain-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
 
 </style>
 </head>
@@ -243,20 +272,12 @@ Notre équipe d'experts travaille en étroite collaboration avec nos clients pou
   </p>
 </div>
 
-   <div class="domain-card" id="openModal">
+   <div class="domain-card">
   <img src="images/mama-jean.jpg" alt="MAMA JEAN Bertrand Robert" class="team-photo">
   <h3>MAMA JEAN Bertrand Robert</h3>
   <p><i>Coordonnateur chargé des affaires juridiques</i></p>
-<!-- Fenêtre modale -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>MAMA JEAN Bertrand Robert</h2>
-    <p>Coordonnateur chargé des affaires juridiques</p>
-    <p>Ici tu peux mettre plus d'informations.</p>
-  </div>
 </div>
-   </div>
+  
       <div class="domain-card">
         <img src="images/equipe 4.jpeg" alt="NLATE Jeanne Danielle Nicole" class="team-photo">
         <h3>NLATE Jeanne Danielle Nicole</h3>
@@ -376,6 +397,7 @@ function googleTranslateElementInit() {
 
 </body>
 </html>
+
 
 
 
