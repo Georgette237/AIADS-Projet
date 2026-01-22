@@ -1,0 +1,41 @@
+/* lien carte */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* popup rectangle */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* quand on clique */
+.popup:target {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+}
+
+/* bouton fermer */
+.popup .close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+}
