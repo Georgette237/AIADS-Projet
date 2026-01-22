@@ -335,6 +335,9 @@ img{
   padding-left: 15px;
   color: #555;
 }
+.member.active .history {
+  display: block;
+}
 
 .domain-card:hover .overlay-text {
     opacity: 1;
@@ -530,6 +533,7 @@ img{
   .hero{height:420px}
   .hero-left h1{font-size:34px}
 }
+
 
 
 
