@@ -320,6 +320,14 @@ img{
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+.member {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
 
 .domain-card{
     background:var(--olive); 
@@ -533,6 +541,7 @@ img{
   .hero{height:420px}
   .hero-left h1{font-size:34px}
 }
+
 
 
 
