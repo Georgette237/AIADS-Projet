@@ -23,82 +23,28 @@
       color: white;
       text-align: center;
     }
-  /* =========================
-   POPUP / MODALE CSS
-========================= */
-
-/* Lien sur toute la carte */
-.card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+ /* modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
 }
 
-/* Fond de la popup */
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  background: var(--card);
-  width: 90%;
-  max-width: 420px;
-  padding: 25px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  opacity: 0;
-  visibility: hidden;
-  z-index: 9999;
-  transition: all 0.3s ease;
-  font-family: Inter, system-ui, sans-serif;
+.modal-content {
+    background: #fff;
+    width: 400px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-/* Affichage au clic */
-.popup:target {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(-50%, -50%) scale(1);
+.modal-close {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
 }
-
-/* Bouton fermer */
-.popup .close {
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  font-size: 20px;
-  text-decoration: none;
-  color: var(--muted);
-  font-weight: bold;
-  transition: color 0.2s ease;
-}
-
-.popup .close:hover {
-  color: var(--accent);
-}
-
-/* Texte */
-.popup h3 {
-  margin-top: 0;
-  color: var(--green-900);
-}
-
-.popup p {
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-/* Effet hover sur la carte */
-.domain-card {
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.domain-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
 </style>
 </head>
 <body>
@@ -261,6 +207,17 @@ Notre équipe d'experts travaille en étroite collaboration avec nos clients pou
     <h3>Dr KEDE ONANA Malgloire</h3>
     <p><i>Président fondateur</i></p>
   </div>
+       <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <h3>Dr KEDE ONANA Malgloire</h3>
+    <p><strong>Fonction :</strong> Président fondateur</p>
+    <p>
+      Ici tu peux mettre une description détaillée :  
+      parcours, expériences, responsabilités, etc.
+    </p>
+  </div>
+       </div>
 
    <div class="domain-card">
   <img src="images/mama-jean.jpg" alt="MAMA JEAN Bertrand Robert" class="team-photo">
@@ -387,6 +344,7 @@ function googleTranslateElementInit() {
 
 </body>
 </html>
+
 
 
 
