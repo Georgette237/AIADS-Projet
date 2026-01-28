@@ -3,165 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Détails membre</title>
-  <style>
-    /* ===== PAGE DETAIL ===== */
-.detail-page {
-  background: var(--bg);
-}
-
-.detail-header {
-  background: #fff;
-  border-bottom: 1px solid #e8efe5;
-}
-
-.detail-container {
-  max-width: 900px;
-  margin: auto;
-  padding: 24px;
-}
-
-/* lien retour */
-.back-link {
-  font-size: 14px;
-  color: var(--green-700);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-/* carte profil */
-.profile-card {
-  background: #fff;
-  display: flex;
-  gap: 24px;
-  padding: 24px;
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  margin-bottom: 30px;
-  align-items: center;
-}
-
-.profile-card img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--green-700);
-}
-
-/* infos */
-.profile-info h1 {
-  margin: 0;
-  font-family: Montserrat, sans-serif;
-  color: var(--green-900);
-}
-
-.role {
-  display: inline-block;
-  margin: 6px 0 14px;
-  font-size: 14px;
-  color: var(--green-700);
-  font-weight: 700;
-}
-
-.bio {
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-/* sections */
-.profile-sections {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.info-card {
-  background: #fff;
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-}
-
-.info-card h3 {
-  margin-top: 0;
-  color: var(--green-900);
-  font-family: Montserrat, sans-serif;
-}
-
-.info-card ul {
-  padding-left: 18px;
-  margin: 0;
-}
-
-.info-card li {
-  margin-bottom: 6px;
-  color: var(--muted);
-}
-
-/* responsive */
-@media (max-width: 800px) {
-  .profile-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile-sections {
-    grid-template-columns: 1fr;
-  }
-}
- </style>
-</head>
   
-<body class="detail-page">
-<header class="detail-header">
-  <div class="detail-container">
-    <a href="index.html" class="back-link">← Retour à l’équipe</a>
-  </div>
-</header>
+</head>
+<body>
 
-<main class="detail-container">
-  <!-- MALGLOIRE -->
-  <section id="kede" class="member-detail">
-    <div class="profile-card">
-      <img src="images/equipe (2).jpg" alt="Dr KEDE ONANA Malgloire">
-      <div class="profile-info">
-        <h1>Dr KEDE ONANA Malgloire</h1>
-        <span class="role">Président fondateur</span>
-        <p class="bio">
-          Médecin, entrepreneur et leader visionnaire, Dr Kede Onana Malgloire
-          œuvre depuis plusieurs années pour le développement institutionnel
-          et humain.
-        </p>
-      </div>
-    </div>
+<!-- Membre 1 -->
+<section id="kede" class="member-detail">
+  <h1>Dr KEDE ONANA Malgloire</h1>
+  <p><strong>Fonction :</strong> Président fondateur</p>
+  <p>Description complète du membre...</p>
+</section>
 
-    <div class="profile-sections">
-      <div class="info-card">
-        <h3>Parcours</h3>
-        <p>Doctorat en médecine, formations internationales, expert en gouvernance.</p>
-      </div>
+<!-- Membre 2 -->
+<section id="jean" class="member-detail">
+  <h1>Jean Dupont</h1>
+  <p><strong>Fonction :</strong> Vice-président</p>
+  <p>Description complète du membre...</p>
+</section>
 
-      <div class="info-card">
-        <h3>Vision</h3>
-        <p>Promouvoir une organisation forte, durable et tournée vers l’excellence.</p>
-      </div>
+<!-- Membre 3 -->
+<section id="marie" class="member-detail">
+  <h1>Marie Claire</h1>
+  <p><strong>Fonction :</strong> Secrétaire générale</p>
+  <p>Description complète du membre...</p>
+</section>
 
-      <div class="info-card">
-        <h3>Responsabilités</h3>
-        <ul>
-          <li>Direction stratégique</li>
-          <li>Représentation institutionnelle</li>
-          <li>Coordination des équipes</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-</main>
+<a href="index.html">⬅ Retour</a>
 
 <script>
   // cacher tous les membres
