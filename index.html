@@ -306,15 +306,8 @@ Notre équipe d'experts travaille en étroite collaboration avec nos clients pou
 </footer>
 <div id="google_translate_element"></div>
 
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement(
-    {pageLanguage: 'fr', includedLanguages: 'en,es,de,it,pt'}, 
-    'google_translate_element'
-  );
-}
-
-  const card = document.querySelector(".domain-card");
+<script>
+ const card = document.querySelector(".domain-card");
 const modal = document.getElementById("modal");
 const closeBtn = document.querySelector(".modal-close");
 
@@ -333,6 +326,16 @@ window.addEventListener("click", (e) => {
 });
 
   
+  
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {pageLanguage: 'fr', includedLanguages: 'en,es,de,it,pt'}, 
+    'google_translate_element'
+  );
+}
+
+
+  
 </script>
 
   
@@ -341,6 +344,7 @@ window.addEventListener("click", (e) => {
 
 </body>
 </html>
+
 
 
 
