@@ -3,50 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <title>Détails membre</title>
-  
+  <style>
+    /* ===== PAGE DETAIL ===== */
+.detail-page {
+  background: var(--bg);
+  font-family: 'Inter', sans-serif;
+  color: #172512;
+}
+
+.detail-header {
+  background: #fff;
+  border-bottom: 1px solid #e8efe5;
+  padding: 16px 0;
+}
+
+.detail-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+}
+
+.back-link {
+  font-size: 14px;
+  color: var(--green-700);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* carte profil */
+.profile-card {
+  background: #fff;
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.profile-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--green-700);
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  color: var(--green-900);
+  font-size: 24px;
+}
+
+.role {
+  display: inline-block;
+  margin: 6px 0 14px;
+  font-size: 14px;
+  color: var(--green-700);
+  font-weight: 700;
+}
+
+.bio {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* sections */
+.profile-sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.info-card h3 {
+  margin-top: 0;
+  color: var(--green-900);
+  font-family: Montserrat, sans-serif;
+}
+
+.info-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.info-card li {
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+/* responsive */
+@media (max-width: 800px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-sections {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
 </head>
-<body>
+<body class="detail-page">
 
-<!-- Membre 1 -->
+<header class="detail-header">
+  <div class="detail-container">
+    <a href="index.html" class="back-link">← Retour à l’équipe</a>
+  </div>
+</header>
+
+<main class="detail-container">
+
+  <!-- Membre 1 -->
+ <!-- Membre KEDE ONANA -->
 <section id="kede" class="member-detail">
-  <h1>Dr KEDE ONANA Malgloire</h1>
-  <p><strong>Fonction :</strong> Président fondateur</p>
-  <p>Description complète du membre...</p>
+  <div class="profile-card">
+    <img src="images/equipe (2).jpg" alt="Dr Magloire Kede Onana">
+    <div class="profile-info">
+      <h1>Dr Magloire Kede Onana</h1>
+      <span class="role">Philosophe & Expert en éducation</span>
+      <p class="bio">
+        Ancien élève de l’École Normale Supérieure de Yaoundé, Dr Magloire Kede Onana est un intellectuel camerounais ayant embrassé une carrière dans l’enseignement de la philosophie dès 1990. Ancien proviseur de lycée, il s’est engagé dans une démarche de recherche universitaire approfondie à partir de 2004.
+      </p>
+    </div>
+  </div>
+
+  <div class="profile-sections">
+    <div class="info-card">
+      <h3>Parcours</h3>
+      <p>
+        Formation en administration et gestion des entreprises à l’IAE de Bordeaux, titulaire d’un doctorat en philosophie de l’éducation de l’Université Paris-Est. Expérience de plusieurs années dans l’enseignement secondaire et la recherche universitaire.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Vision</h3>
+      <p>
+        Ses recherches portent sur l’éducation, les valeurs humaines, l’équité et la gouvernance éducative, ainsi que sur l’innovation sociale et la gestion des territoires. Il s’intéresse également au développement durable et à l’émergence de l’Afrique dans le progrès global.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Responsabilités</h3>
+      <ul>
+        <li>Développement et mise en œuvre de projets postdoctoraux</li>
+        <li>Promotion de politiques éducatives équitables et innovantes</li>
+        <li>Recherche appliquée sur le développement durable et l’innovation sociale</li>
+        <li>Encadrement académique et réflexion stratégique</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<!-- Membre 2 -->
+
+  <!-- Membre 2 -->
 <section id="jean" class="member-detail">
-  <h1>Jean Dupont</h1>
-  <p><strong>Fonction :</strong> Vice-président</p>
-  <p>Description complète du membre...</p>
+  <div class="profile-card">
+    <img src="images/kaldjob.jpg" alt="Jean Marc KALDJOB">
+    <div class="profile-info">
+      <h1>Jean Marc KALDJOB</h1>
+      <span class="role">Ingénieur agronome & Entrepreneur</span>
+      <p class="bio">
+        Ingénieur agronome de formation, ancien étudiant de l’ISMAM de Nkongsamba et de l’ISAGO d’Obala, Jean Marc KALDJOB est un professionnel camerounais passionné par le développement agricole. Depuis 2022, il s’est engagé dans une carrière entrepreneuriale pour transformer le secteur agricole au Cameroun.
+      </p>
+    </div>
+  </div>
+
+  <div class="profile-sections">
+    <div class="info-card">
+      <h3>Parcours</h3>
+      <p>
+        Ses travaux ont porté sur la cartographie et l’évaluation des terres propices à la culture du palmier à huile dans la région de l’Est, révélant un potentiel agronomique remarquable. Co-fondateur et gestionnaire de projets chez LéCare Agriculture, il accompagne la production végétale et animale et soutient les exploitations agricoles.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Vision</h3>
+      <p>
+        Animé par une vision d’agriculture durable, inclusive et performante, il pilote un projet structurant pour améliorer la productivité des terres agricoles au Cameroun, en intégrant des approches innovantes et respectueuses des écosystèmes.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Responsabilités</h3>
+      <ul>
+        <li>Coordinateur de projets à l’Association Internationale d’Appui au Développement et à la Solidarité (AIADS)</li>
+        <li>Gestion et conseil en production végétale et animale</li>
+        <li>Développement des activités d’élevage de poulets, porcs et poissons</li>
+        <li>Accompagnement technique des exploitations et projets agricoles</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<!-- Membre 3 -->
-<section id="marie" class="member-detail">
-  <h1>Marie Claire</h1>
-  <p><strong>Fonction :</strong> Secrétaire générale</p>
-  <p>Description complète du membre...</p>
-</section>
-
-<a href="index.html">⬅ Retour</a>
+</main>
 
 <script>
-  // cacher tous les membres
-document.querySelectorAll(".member-detail").forEach(section => {
-    section.style.display = "none";
-});
+    document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".member-detail");
+    const params = new URLSearchParams(window.location.search);
+    const memberId = params.get("id");
 
-// récupérer l'id dans l'URL
-const params = new URLSearchParams(window.location.search);
-const memberId = params.get("id");
+    sections.forEach(section => section.style.display = "none");
 
-// afficher le bon membre
-if (memberId) {
-    const section = document.getElementById(memberId);
-    if (section) {
-        section.style.display = "block";
+    if (memberId) {
+        const activeSection = document.getElementById(memberId);
+        if (activeSection) activeSection.style.display = "block";
+    } else {
+        sections[0].style.display = "block";
     }
-}
+});
 
 </script>
 </body>
