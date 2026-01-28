@@ -322,7 +322,6 @@ img{
 }
 
 .domain-card{
-    cursor: pointer;
     background:var(--olive); 
     border-radius:10px; 
     padding:16px;
@@ -502,6 +501,7 @@ img{
   .hero{height:420px}
   .hero-left h1{font-size:34px}
 }
+
 
 
 
