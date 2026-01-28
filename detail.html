@@ -2,20 +2,52 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Détails</title>
+  <title>Détails membre</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Dr KEDE ONANA Malgloire</h1>
-<p><strong>Fonction :</strong> Président fondateur</p>
+<!-- Membre 1 -->
+<section id="kede" class="member-detail">
+  <h1>Dr KEDE ONANA Malgloire</h1>
+  <p><strong>Fonction :</strong> Président fondateur</p>
+  <p>Description complète du membre...</p>
+</section>
 
-<p>
-  Ici tu mets les informations détaillées :  
-  parcours, expérience, vision, responsabilités, etc.
-</p>
+<!-- Membre 2 -->
+<section id="jean" class="member-detail">
+  <h1>Jean Dupont</h1>
+  <p><strong>Fonction :</strong> Vice-président</p>
+  <p>Description complète du membre...</p>
+</section>
+
+<!-- Membre 3 -->
+<section id="marie" class="member-detail">
+  <h1>Marie Claire</h1>
+  <p><strong>Fonction :</strong> Secrétaire générale</p>
+  <p>Description complète du membre...</p>
+</section>
 
 <a href="index.html">⬅ Retour</a>
 
+<script>
+  // cacher tous les membres
+document.querySelectorAll(".member-detail").forEach(section => {
+    section.style.display = "none";
+});
+
+// récupérer l'id dans l'URL
+const params = new URLSearchParams(window.location.search);
+const memberId = params.get("id");
+
+// afficher le bon membre
+if (memberId) {
+    const section = document.getElementById(memberId);
+    if (section) {
+        section.style.display = "block";
+    }
+}
+
+</script>
 </body>
 </html>
